@@ -1,0 +1,1 @@
+This repository contains a maze project made in Unity with the purpose of practicing scripting in said game engine.
