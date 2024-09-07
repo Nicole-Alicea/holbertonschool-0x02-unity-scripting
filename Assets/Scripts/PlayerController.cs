@@ -7,21 +7,14 @@ public class PlayerController : MonoBehaviour
 {
     public float horizontalInput; // Stores horizontal input values from the player(sphere)
     public float verticalInput; // Stores vertical input values from the player(sphere)
-    // public Rigidbody rigidBody;
     public float speed = 10f;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
     // Update is called once per frame
     void FixedUpdate()
     {
         // read values from keyboard
-        horizontalInput = Input.GetAxis("Horizontal");
-        verticalInput = Input.GetAxis("Vertical");
+        horizontalInput = Input.GetAxis("Horizontal"); // works with WASD and arrow keys
+        verticalInput = Input.GetAxis("Vertical"); // works with WASD and arrow keys
 
         // move the player(sphere)
         transform.Translate(Vector3.forward * Time.deltaTime * verticalInput * speed); // controls forward and backward movements
