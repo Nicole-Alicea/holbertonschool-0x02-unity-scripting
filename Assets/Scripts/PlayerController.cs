@@ -10,6 +10,7 @@ public class PlayerController : MonoBehaviour
     public float verticalInput; // Stores vertical input values from the player(sphere)
     public float speed = 10f;
     private int score = 0;
+    public int health = 5;
 
     // Update is called once per frame
     void FixedUpdate()
@@ -30,6 +31,12 @@ public class PlayerController : MonoBehaviour
             score++;
             Debug.Log($"Score: {score}");
             Destroy(other.gameObject);
+        }
+
+        if (other.tag == "Trap")
+        {
+            health--;
+            Debug.Log($"Health: {health}");
         }
     
     }
